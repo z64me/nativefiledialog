@@ -8,7 +8,6 @@
 #include <assert.h>
 #include <string.h>
 #include <gtk/gtk.h>
-#include "nfd.h"
 #include "nfd_common.h"
 
 
