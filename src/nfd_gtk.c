@@ -45,12 +45,12 @@ static void AddFiltersToDialog( GtkWidget *dialog, const char *filterList )
         
         if ( NFDi_IsFilterSegmentChar(*p_filterList) )
         {
-            char typebufWildcard[NFD_MAX_STRLEN];
+            char typebufWildcard[NFD_MAX_STRLEN + 4];
             /* add another type to the filter */
             assert( strlen(typebuf) > 0 );
             assert( strlen(typebuf) < NFD_MAX_STRLEN-1 );
             
-            snprintf( typebufWildcard, NFD_MAX_STRLEN, "*.%s", typebuf );
+            snprintf( typebufWildcard, sizeof(typebufWildcard), "*.%s", typebuf );
             AddTypeToFilterName( typebuf, filterName, NFD_MAX_STRLEN );
             
             gtk_file_filter_add_pattern( filter, typebufWildcard );
