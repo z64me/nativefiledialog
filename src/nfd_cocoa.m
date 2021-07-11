@@ -5,7 +5,6 @@
  */
 
 #include <AppKit/AppKit.h>
-#include "nfd.h"
 #include "nfd_common.h"
 
 static NSArray *BuildAllowedFileTypes( const char *filterList )
